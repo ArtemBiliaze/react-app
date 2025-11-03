@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+// import NewsItem from "./components/NewsItem/index.jsx";
+
+import "./App.css";
+import Header from "./components/Header";
+
+//реалізувати компонент header який містить лого і
+// або фото користувача, якщо він залогінився ,
+// або кнопки login/register
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const isLogin = true;
+  return <Header isLogin={isLogin}/>;
 }
 
 export default App;
