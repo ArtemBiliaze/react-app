@@ -1,15 +1,8 @@
-// import NewsItem from "./components/NewsItem/index.jsx";
-
-import "./App.css";
-import Header from "./components/Header";
-
-//реалізувати компонент header який містить лого і
-// або фото користувача, якщо він залогінився ,
-// або кнопки login/register
+import Counter from "./Counter";
 
 function App() {
-    const isLogin = true;
-  return <Header isLogin={isLogin}/>;
+  return <Counter />;
 }
 
 export default App;
+//* new Counter().render()
