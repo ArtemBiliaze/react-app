@@ -1,8 +1,30 @@
-import Counter from "./Counter";
+import { Component } from "react";
+import StopWatch from "./components/StopWatch";
 
-function App() {
-  return <Counter />;
-}
+class App extends Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      isVisible: false,
+    };
+  }
+
+  handleClick = () => {
+    const { isVisible } = this.state;
+    this.setState({ isVisible: !isVisible });
+  };
+  render() {
+    const { isVisible } = this.state;
+      return (
+        <>
+          <button onClick={this.handleClick}>
+            {isVisible ? "unmount" : "mount"}
+          </button>
+          {isVisible && <StopWatch />}
+        </>
+      );
+    }
+  }
 export default App;
 //* new Counter().render()
