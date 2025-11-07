@@ -13,6 +13,7 @@ class AnimalSlider extends Component {
     this.id = null;
   }
 
+  
   loadImg = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
       .then((response) => response.json())
